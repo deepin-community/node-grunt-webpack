@@ -1,0 +1,30 @@
+Source: node-grunt-webpack
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 12)
+ , pkg-js-tools (>= 0.9.20~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-grunt-webpack
+Vcs-Git: https://salsa.debian.org/js-team/node-grunt-webpack.git
+Homepage: https://github.com/webpack-contrib/grunt-webpack
+Rules-Requires-Root: no
+
+Package: node-grunt-webpack
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-deep-for-each
+ , node-lodash (>= 4.7.0)
+Description: Use webpack with grunt
+ grunt is a JavaScript task runner/build system/maintainer tool.
+ .
+ Webpack takes code targeted at node.js and makes it run in the browser.
+ Node.js comes with API of its own that is not available in the browsers.
+ Webpack exposes this code to programs that are unaware they are running in a
+ browser.
+ .
+ Node.js is an event-based server-side JavaScript engine.

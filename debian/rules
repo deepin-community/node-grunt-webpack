@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@ --with nodejs
+
+override_dh_auto_test:
+	echo "Only grunt tasks are included, so require test will not work"
