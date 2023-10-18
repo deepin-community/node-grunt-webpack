@@ -1,3 +1,0 @@
-Tests: require
-Depends: @, webpack
-Restrictions: superficial

@@ -1,0 +1,16 @@
+Description: use grunt from /usr/bin
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-12-13
+
+--- a/tests/integration/fixtures.test.js
++++ b/tests/integration/fixtures.test.js
+@@ -8,7 +8,7 @@
+ import assertGruntFactory from "../utils/assertGrunt";
+ 
+ const TMP_DIRECTORY = path.join(__dirname, "tmp");
+-const GRUNT_BIN = path.join(__dirname, "../../node_modules/.bin/grunt");
++const GRUNT_BIN = "/usr/bin/grunt";
+ 
+ const files = glob.sync(path.join(__dirname, "fixtures/**/Gruntfile.js"), {
+   dot: true,
