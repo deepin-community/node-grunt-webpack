@@ -4,21 +4,29 @@ Uploaders: Pirate Praveen <praveen@debian.org>
 Section: javascript
 Priority: optional
 Build-Depends:
- debhelper-compat (= 12)
- , pkg-js-tools (>= 0.9.20~)
-Standards-Version: 4.5.0
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , jest <!nocheck>
+ , grunt <!nocheck>
+ , node-babel-loader <!nocheck>
+ , node-deep-for-each <!nocheck>
+ , node-fast-glob <!nocheck>
+ , node-fs-extra <!nocheck>
+ , webpack <!nocheck>
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-grunt-webpack
 Vcs-Git: https://salsa.debian.org/js-team/node-grunt-webpack.git
 Homepage: https://github.com/webpack-contrib/grunt-webpack
+Testsuite: autopkgtest-pkg-nodejs
 Rules-Requires-Root: no
 
 Package: node-grunt-webpack
 Architecture: all
 Depends:
  ${misc:Depends}
- , nodejs
  , node-deep-for-each
- , node-lodash (>= 4.7.0)
+ , node-lodash
+Recommends: webpack
 Description: Use webpack with grunt
  grunt is a JavaScript task runner/build system/maintainer tool.
  .

@@ -1,1 +1,6 @@
-.pc/
+.nyc_output
+coverage
+node_modules
+npm-debug.log
+tests/integration/tmp
+yarn-error.log
